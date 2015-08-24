@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
       pkg_cmd << "wget -q -O - https://get.docker.io/gpg | apt-key add -;" \
         "echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list;" \
         "echo deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main  > /etc/apt/sources.list.d/ansible.list;" \
-        "apt-get update -qq; apt-get dist-upgrade -y --force-yes; apt-get install -q -y --force-yes lxc-docker atop htop traceroute software-properties-common ansible; "
+        "apt-get update -qq; apt-get dist-upgrade -y --force-yes; apt-get install -q -y --force-yes lxc-docker atop htop traceroute software-properties-common ansible sysstat; "
       # Add vagrant user to the docker group
       pkg_cmd << "usermod -a -G docker vagrant; "
       # clean up for smaller image
