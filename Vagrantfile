@@ -17,8 +17,8 @@ Vagrant.configure("2") do |config|
     end
 
     app.vm.provider "virtualbox" do |v|
-      v.memory  = 1536
-      v.cpus = 2
+      v.memory  = 1024
+      v.cpus = 1
     end
 
     app.nfs.functional = false
