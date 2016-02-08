@@ -22,7 +22,7 @@ clean-%:
 	-taskkill /im ruby.exe /f
 	-vagrant destroy $* -f
 	-vagrant box remove thegreatjerboa/$*-starter
-	rm -f ../../boxes/$*-starter.box
+	rm -f ./$*-starter.box
 
 
 launch-%:
